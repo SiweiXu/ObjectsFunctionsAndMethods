@@ -6,7 +6,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   Locate the syntax (notation) errors in this file
 #   by looking for red underlines.
 #
@@ -62,9 +62,9 @@ def turtle_fn():
     alan.pen = rg.Pen('blue', 30)
     alan.paint_bucket = rg.PaintBucket('yellow')
 
-    alan.back(3 * (47 + 16))
+    alan.backward(3 * (47 + 16))
     alan.begin_fill()
-    alan.circle(25)
+    alan.draw_circle(25)
     alan.end_fill()
 
     alan.forward(200)
@@ -74,4 +74,6 @@ def turtle_fn():
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
+
+
 main()
