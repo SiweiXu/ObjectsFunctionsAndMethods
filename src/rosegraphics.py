@@ -546,7 +546,7 @@ class _Shape(object, metaclass=__FreezeClass__):
         """
         if isinstance(window_or_canvas, RoseWindow):
             window_or_canvas = window_or_canvas.initial_canvas
-        window_or_canvas._draw(self)
+        window_or_canvas.draw(self)
 
     def detach_from(self, rose_canvas):
         """
