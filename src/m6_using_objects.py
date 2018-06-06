@@ -16,6 +16,7 @@ def main():
     # Test your functions by putting calls to them here:
     two_circles()
     circle_and_rectangle()
+    lines()
 
 
 def two_circles():
@@ -52,7 +53,7 @@ def two_circles():
 
 
 def circle_and_rectangle():
-    window2 = rg.RoseWindow
+    window2 = rg.RoseWindow()
 
     center3 = rg.Point(200, 150)
     point1 = rg.Point(50, 40)
@@ -61,7 +62,6 @@ def circle_and_rectangle():
     circle3.fill_color = 'blue'
 
     rect = rg.Rectangle(center3, point1)
-    rect.get_center()
 
     circle3.attach_to(window2)
     rect.attach_to(window2)
@@ -78,9 +78,11 @@ def circle_and_rectangle():
 
     print(rect.outline_thickness)
     print(rect.fill_color)
-    print((center3.x + point1.x)/2, (center3.y + point1.y)/2)
+    print(rect.get_center())
     print((center3.x + point1.x)/2)
     print((center3.y + point1.y)/2)
+
+    window2.close_on_mouse_click()
 
     """
     -- Constructs an rg.RoseWindow.
@@ -113,7 +115,7 @@ def circle_and_rectangle():
            150.0
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -124,6 +126,28 @@ def circle_and_rectangle():
 
 
 def lines():
+    window3 = rg.RoseWindow()
+    point2 = rg.Point(50,90)
+    point3 = rg.Point(90,180)
+    point4 = rg.Point(180,270)
+    line = rg.Line(point2, point3)
+
+    linee = rg.Line(point3, point4)
+
+    linee.thickness = 6
+    linee.color = 'blue'
+
+    line.attach_to(window3)
+    linee.attach_to(window3)
+
+    window3.render()
+
+    print(linee.get_midpoint())
+    print(linee.get_midpoint().x)
+    print(linee.get_midpoint().y)
+
+    window3.close_on_mouse_click()
+
     """
     -- Constructs a rg.RoseWindow.
     -- Constructs and draws on the window two rg.Lines such that:
@@ -146,7 +170,7 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
 
 
