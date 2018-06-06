@@ -1168,7 +1168,7 @@ class Line(_Shape, _ShapeWithThickness):
        line.move_by(-50, 60)
     """
 
-    def __init__(self, start, end):
+    def __init__(self, start: object, end: object) -> object:
         """
           :type  start:  rg.Point
           :type  end:    rg.Point
@@ -1214,6 +1214,7 @@ class Line(_Shape, _ShapeWithThickness):
     def get_midpoint(self):
         """
         Returns an rg.Point at the midpoint (center) of this Line.
+        :rtype: 
         """
         return Point((self.start.x + self.end.x) / 2,
                      (self.start.y + self.end.y) / 2)
