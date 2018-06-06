@@ -44,10 +44,10 @@ def print_math():
     x = math.cos(math.pi)
     print(x)
 
-# Why is it not like Maple, where we only type in pi? It took me long to think of adding math..
+# It took me long to think of adding "math." to the code.
 
     y = math.sin(math.pi)
-    print('The sine of PI is, y')
+    print(y)
 
 
 def turtle_fn():
